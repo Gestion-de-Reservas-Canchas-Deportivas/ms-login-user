@@ -13,12 +13,12 @@ import org.springframework.web.bind.annotation.*;
 public class LoginController {
 
     /**
-     * Servicio para la lógica de inicio de sesión de contactos.
+     * Servicio para la lógica de inicio de sesión de usuarios.
      */
     private final ILoginUserService iLoginUserService;
 
     @PostMapping("/login")
-    public ResponseEntity<RespuestaGeneralDTO> loginContact(@RequestBody LoginUserDTO loginUserDTO) {
+    public ResponseEntity<RespuestaGeneralDTO> loginUser(@RequestBody LoginUserDTO loginUserDTO) {
         RespuestaGeneralDTO respuestaGeneralDTO = iLoginUserService.loginUser(loginUserDTO);
         return ResponseEntity.status(respuestaGeneralDTO.getStatus()).body(respuestaGeneralDTO);
     }

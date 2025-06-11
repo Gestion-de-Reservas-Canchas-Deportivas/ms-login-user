@@ -17,7 +17,7 @@ public interface ILoginUserService {
      * Realiza el inicio de sesión de un usuario.
      *
      * @param loginUserDTO el objeto {@link LoginUserDTO} que contiene las credenciales
-     *                     del contacto (correo y contraseña).
+     *                     del usuario (correo y contraseña).
      * @return un objeto {@link RespuestaGeneralDTO} que contiene el estado, mensaje y datos
      * del resultado de la operación, incluyendo un token de autenticación si el
      * inicio de sesión es exitoso.
