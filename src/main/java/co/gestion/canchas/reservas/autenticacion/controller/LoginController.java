@@ -7,6 +7,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Map;
+
 @RestController
 @RequestMapping("/public")
 @RequiredArgsConstructor
@@ -21,6 +23,13 @@ public class LoginController {
     public ResponseEntity<RespuestaGeneralDTO> loginUser(@RequestBody LoginUserDTO loginUserDTO) {
         RespuestaGeneralDTO respuestaGeneralDTO = iLoginUserService.loginUser(loginUserDTO);
         return ResponseEntity.status(respuestaGeneralDTO.getStatus()).body(respuestaGeneralDTO);
+    }
+
+    @PostMapping("/forgot-password")
+    public ResponseEntity<RespuestaGeneralDTO> forgotPassword(@RequestBody Map<String,String> body) {
+        String email = body.get("emailAddress");
+        RespuestaGeneralDTO resp = iLoginUserService.recoverPassword(email);
+        return ResponseEntity.status(resp.getStatus()).body(resp);
     }
 
 }

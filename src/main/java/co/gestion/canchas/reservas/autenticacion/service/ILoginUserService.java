@@ -23,4 +23,7 @@ public interface ILoginUserService {
      * inicio de sesión es exitoso.
      */
     RespuestaGeneralDTO loginUser(LoginUserDTO loginUserDTO);
+
+    RespuestaGeneralDTO recoverPassword(String email);
+
 }
