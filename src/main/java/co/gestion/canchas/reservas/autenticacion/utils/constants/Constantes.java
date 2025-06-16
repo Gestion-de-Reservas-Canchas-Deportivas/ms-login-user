@@ -12,7 +12,7 @@ public class Constantes {
     public static final String ORIGEN_DESARROLLO = "http://localhost:4200";
 
     // Rutas
-    public static final String V3_API_DOCS_PATH = "/v3/api-docs/**";
+    public static final String V3_API_DOCS_PATH = "/api-docs/**";
     public static final String SWAGGER_UI_PATH = "/doc/swagger-ui/***";
     public static final String USER_PATH = "/usuario/**";
 

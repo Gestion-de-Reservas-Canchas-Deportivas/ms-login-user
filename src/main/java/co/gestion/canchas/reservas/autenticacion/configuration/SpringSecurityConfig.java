@@ -47,7 +47,15 @@ public class SpringSecurityConfig {
                         .authenticationEntryPoint(customAuthenticationEntryPoint)
                         .accessDeniedHandler(customAccessDeniedHandler))
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/public/login", V3_API_DOCS_PATH, SWAGGER_UI_PATH)
+                        .requestMatchers(
+                                "/public/login",
+                                "/swagger-ui.html",
+                                "/swagger-ui/**",
+                                "/v3/api-docs/**",
+                                "/swagger-resources/**",
+                                "/webjars/**"
+                        )
+
                         .permitAll()
                         .anyRequest().authenticated())
                 .authenticationProvider(authenticationProvider)

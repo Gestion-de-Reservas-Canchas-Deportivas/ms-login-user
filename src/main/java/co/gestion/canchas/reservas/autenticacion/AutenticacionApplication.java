@@ -12,7 +12,7 @@ public class AutenticacionApplication {
 
         //String password = "Mf 1010119827@";
         //String bcryptHash = BCrypt.withDefaults().hashToString(12, password.toCharArray());
-       // System.out.println("🔐 Hash con BCrypt (sin Spring): " + bcryptHash);
+        //System.out.println("🔐 Hash con BCrypt (sin Spring): " + bcryptHash);
     }
 
 }
