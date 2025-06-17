@@ -37,4 +37,15 @@ public class FacturacionDTO {
     public FacturacionDTO() {
 
     }
+
+    public FacturacionDTO(long reservaId, long usuarioId, String tipoCancha, String fecha, String horaInicio, String horaFin, BigDecimal monto) {
+        this.reservaId = reservaId;
+        this.usuarioId = usuarioId;
+        this.tipoCancha = tipoCancha;
+        this.fecha = LocalDate.parse(fecha);
+        this.horaInicio = horaInicio;
+        this.horaFin = horaFin;
+        this.monto = monto;
+    }
+
 }

@@ -24,4 +24,8 @@ public class ReporteReservaDTO {
         this.horasUtilizadas = horasUtilizadas;
         this.porcentajeOcupacion = porcentajeOcupacion;
     }
+
+    public ReporteReservaDTO() {
+
+    }
 }
