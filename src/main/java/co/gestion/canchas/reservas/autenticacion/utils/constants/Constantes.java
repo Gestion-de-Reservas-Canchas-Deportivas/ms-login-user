@@ -2,6 +2,8 @@ package co.gestion.canchas.reservas.autenticacion.utils.constants;
 
 import jakarta.servlet.http.HttpServletResponse;
 
+import java.time.format.DateTimeFormatter;
+
 public class Constantes {
 
     // Roles
@@ -48,5 +50,25 @@ public class Constantes {
     // Prefijo y tamaño de tokens Bearer
     public static final String BEARER_PREFIX = "Bearer ";
     public static final int SIZE_BEARER = 7;
+
+    //formatos de hora y feccha
+    public static final DateTimeFormatter DF = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+    public static final DateTimeFormatter TF = DateTimeFormatter.ofPattern("HH:mm");
+
+    //plantilla mensaje correo
+    public static final String PLANTILLA_MENSAJE = """
+        Estimado/a %s,
+
+        Nos complace informarle que su reserva ha sido procesada correctamente. A continuación, encontrará los detalles de su reserva:
+
+        Número de reserva: #%s
+        Fecha de reserva: %s
+        Hora de uso: %s
+        Cancha: %s
+
+        Si necesita realizar alguna modificación o tiene cualquier consulta adicional, no dude en ponerse en contacto con nosotros respondiendo a este correo %s.
+
+        ¡Esperamos verle pronto!
+        """;
 
 }

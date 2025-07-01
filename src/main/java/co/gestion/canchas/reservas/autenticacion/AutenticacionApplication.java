@@ -3,8 +3,10 @@ package co.gestion.canchas.reservas.autenticacion;
 import at.favre.lib.crypto.bcrypt.BCrypt;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.scheduling.annotation.EnableAsync;
 
 @SpringBootApplication
+@EnableAsync
 public class AutenticacionApplication {
 
     public static void main(String[] args) {
